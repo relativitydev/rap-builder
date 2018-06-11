@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="RapCreator.a8751e93-730b-40f6-a95f-9255ec120658" Version="0.1" Language="en-US" Publisher="Relativity" />
+        <Identity Id="RapCreator.a8751e93-730b-40f6-a95f-9255ec120658" Version="0.2" Language="en-US" Publisher="Relativity" />
         <DisplayName>RapCreator</DisplayName>
         <Description xml:space="preserve">Alpha version of a Hackathon project aimed at allowing the creation of RAP files within the Visual Studio build. At this time there is no support for this project. If you are interested, reach out to the Developer Experience team at Relativity.</Description>
         <License>license.txt</License>

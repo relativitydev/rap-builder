@@ -31,10 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="kCura.RAPBuilder, Version=1.12.9.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RelativityDev.RapBuilder.0.0.0.1-alpha\lib\kCura.RAPBuilder.exe</HintPath>
+      <HintPath>..\packages\RelativityDev.RapBuilder.0.0.0.2-alpha\lib\kCura.RAPBuilder.exe</HintPath>
     </Reference>
     <Reference Include="rap-versioning, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RelativityDev.RapBuilder.0.0.0.1-alpha\lib\rap-versioning.exe</HintPath>
+      <HintPath>..\packages\RelativityDev.RapBuilder.0.0.0.2-alpha\lib\rap-versioning.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,13 +63,13 @@
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets. -->
   <PropertyGroup>
-    <PostBuildEvent>"$(ProjectDir)..\packages\RelativityDev.RapBuilder.0.0.0.1-alpha\lib\rap-versioning.exe" increment "$(ProjectDir)application.xml" &gt; tmpFile
+    <PostBuildEvent>"$(ProjectDir)bin\rap-versioning.exe" increment "$(ProjectDir)application.xml" &gt; tmpFile
 
 Set /p result= &lt; tmpFile
 del tmpFile
 
 
-"$(ProjectDir)..\packages\RelativityDev.RapBuilder.0.0.0.1-alpha\lib\kCura.RAPBuilder.exe" /source:"$(ProjectDir)\" /input:"$(ProjectDir)build.xml" /servertype:local /version:%25result%25</PostBuildEvent>
+"$(ProjectDir)bin\kCura.RAPBuilder.exe" /source:"$(ProjectDir)\" /input:"$(ProjectDir)build.xml" /servertype:local /version:%25result%25</PostBuildEvent>
   </PropertyGroup>
   <!-- <PropertyGroup>
     <PostBuildEvent>"$(ProjectDir)..\packages\kCura.RAPBuilder.1.12.9\lib\kCura.RAPBuilder.exe" /source:"$(ProjectDir)\" /input:"$(ProjectDir)build.xml" /servertype:local /version:9.6.0.0</PostBuildEvent>
