@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rap-versioning", "rap-versioning\rap-versioning.csproj", "{C0DF8D0B-74F3-4562-B7E6-84385E4B0CB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAgent", "..\..\..\sample-application\Source\SampleAgent\SampleAgent.csproj", "{311C5570-EEAA-4A38-B2D8-59F51CC2D093}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleCustomPage", "..\..\..\sample-application\Source\SampleCustomPage\SampleCustomPage.csproj", "{ADEC38F5-E128-42EE-9C45-DBE5E858C0A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplePreSaveEventHandler", "..\..\..\sample-application\Source\SamplePreSaveEventHandler\SamplePreSaveEventHandler.csproj", "{0CFF90F7-9DCB-4839-BCA6-444CC8D3A7B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApplicationRAPBuilder", "SampleApplicationRAPBuilder\SampleApplicationRAPBuilder.csproj", "{36585CE8-1E68-489F-84A0-69F1EAD80052}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0DF8D0B-74F3-4562-B7E6-84385E4B0CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0DF8D0B-74F3-4562-B7E6-84385E4B0CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0DF8D0B-74F3-4562-B7E6-84385E4B0CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0DF8D0B-74F3-4562-B7E6-84385E4B0CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{311C5570-EEAA-4A38-B2D8-59F51CC2D093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{311C5570-EEAA-4A38-B2D8-59F51CC2D093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{311C5570-EEAA-4A38-B2D8-59F51CC2D093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{311C5570-EEAA-4A38-B2D8-59F51CC2D093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADEC38F5-E128-42EE-9C45-DBE5E858C0A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEC38F5-E128-42EE-9C45-DBE5E858C0A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEC38F5-E128-42EE-9C45-DBE5E858C0A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEC38F5-E128-42EE-9C45-DBE5E858C0A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CFF90F7-9DCB-4839-BCA6-444CC8D3A7B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CFF90F7-9DCB-4839-BCA6-444CC8D3A7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CFF90F7-9DCB-4839-BCA6-444CC8D3A7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CFF90F7-9DCB-4839-BCA6-444CC8D3A7B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36585CE8-1E68-489F-84A0-69F1EAD80052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36585CE8-1E68-489F-84A0-69F1EAD80052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36585CE8-1E68-489F-84A0-69F1EAD80052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36585CE8-1E68-489F-84A0-69F1EAD80052}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DDDA8AF-9BF3-4DEC-ACF5-CCC430D199BA}
+	EndGlobalSection
+EndGlobal
