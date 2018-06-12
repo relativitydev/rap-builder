@@ -1,0 +1,18 @@
+<BuildTools>
+  <RAPBuilder>
+    <Applications>
+      <Application name="SampleApplicationRAPBuilder">
+        <Destination>bin\SampleApplicationRAPBuilder.rap</Destination>
+        <ApplicationSchema>application.xml</ApplicationSchema>
+        <Assemblies>
+          <Assembly>bin\SamplePreSaveEventHandler.dll</Assembly>
+          <Assembly>bin\SampleAgent.dll</Assembly>
+        </Assemblies>
+        <ResourceFiles />
+        <CustomPages>
+          <CustomPage guid="98f8d3f6-760e-4085-b8ff-b8ebd5c15ed2">bin\SampleCustomPage</CustomPage>
+        </CustomPages>
+      </Application>
+    </Applications>
+  </RAPBuilder>
+</BuildTools>
