@@ -31,10 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="kCura.RAPBuilder, Version=1.12.9.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RelativityDev.RapBuilder.0.0.0.2-alpha\lib\kCura.RAPBuilder.exe</HintPath>
+      <HintPath>..\packages\RelativityDev.RapBuilder.0.0.0.3-alpha\lib\kCura.RAPBuilder.exe</HintPath>
     </Reference>
-    <Reference Include="rap-versioning, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RelativityDev.RapBuilder.0.0.0.2-alpha\lib\rap-versioning.exe</HintPath>
+    <Reference Include="rap-versioning, Version=0.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RelativityDev.RapBuilder.0.0.0.3-alpha\lib\rap-versioning.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
