@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
 namespace rap_versioning
@@ -62,8 +57,8 @@ namespace rap_versioning
 			Version version = new Version(versionNumber);
 			int revisionNumber = version.Revision;
 			revisionNumber++;
-			string newVersionNumber = version.Major.ToString() + "."  + version.Minor.ToString() + "." + version.MajorRevision.ToString() + "." + revisionNumber.ToString();
-	
+			string newVersionNumber = version.Major.ToString() + "." + version.Minor.ToString() + "." + version.MajorRevision.ToString() + "." + revisionNumber.ToString();
+
 			XmlDocument doc = new XmlDocument();
 			doc.Load(fileName);
 			doc.SelectSingleNode("/Application/Version").InnerText = newVersionNumber;
@@ -99,12 +94,12 @@ namespace rap_versioning
 					string projPath = @"bin\" + assemblyName;
 					XmlNode newAssemblyNode = buildXML.CreateElement("Assembly");
 					newAssemblyNode.InnerText = projPath;
-					buildAssembliesNode.AppendChild(newAssemblyNode); 
+					buildAssembliesNode.AppendChild(newAssemblyNode);
 				}
 
 				buildXML.Save(buildXMLPath);
 			}
-			
+
 			return "something";
 		}
 
@@ -117,9 +112,9 @@ namespace rap_versioning
 			XmlDocument applicationXML = new XmlDocument();
 			applicationXML.Load(fileName);
 			XmlNodeList applicationCustomPageNodes = applicationXML.SelectNodes("/Application/CustomPages");
-			
 
-		
+
+
 			XmlDocument buildXML = new XmlDocument();
 			string buildXMLPath = fileName.Replace("application.xml", "build.xml");
 			buildXML.Load(buildXMLPath);
@@ -155,22 +150,20 @@ namespace rap_versioning
 				//Test for Null
 				foreach (XmlNode customPage in applicationCustomPageNodes[0].SelectNodes("CustomPage"))
 				{
-					customPageZipFileName = customPage.SelectSingleNode("FileName").InnerText;
 					customPageGuid = customPage.SelectSingleNode("Guid").InnerText;
+					//todo: increment and save it back to the application.xml
 					customPageVersion = customPage.SelectSingleNode("ApplicationVersion").InnerText;
-					customPageProjectName = Path.GetFileNameWithoutExtension(customPageZipFileName);
+					customPageProjectName = customPage.SelectSingleNode("Name").InnerText;
 
 					customPageProjectReferenceNode = rapBuilderCsprojFile.SelectSingleNode(@"ns:Project/ns:ItemGroup/ns:ProjectReference[ns:Name[text()='" + customPageProjectName + @"']]", nsmgr);
 					customPageProjectLocation = customPageProjectReferenceNode.Attributes["Include"].Value;
-					customPageProjectLocationPath =
-						Path.GetFullPath(Path.GetFullPath(fileName) + @"\..\.." + customPageProjectLocation);
+					customPageProjectLocationPath = Path.GetFullPath(Path.GetFullPath(fileName) + @"\..\.." + customPageProjectLocation);
 
 					XmlDocument customPageProjectCsprojFileXML = new XmlDocument();
 					customPageProjectCsprojFileXML.Load(customPageProjectLocationPath);
 					publishingProfileName = customPageProjectCsprojFileXML.SelectSingleNode(@"/ns:Project/ns:PropertyGroup/ns:AutoDeployPublishProfileName", nsmgr).InnerText;
 
-					publishProfilePath = Path.GetDirectoryName(customPageProjectLocationPath) + @"\Properties\PublishProfiles\" +
-					                     publishingProfileName + @".pubxml";
+					publishProfilePath = Path.GetDirectoryName(customPageProjectLocationPath) + @"\Properties\PublishProfiles\" + publishingProfileName + @".pubxml";
 					XmlDocument publishProfileXML = new XmlDocument();
 					publishProfileXML.Load(publishProfilePath);
 					customPageOutputLocation = publishProfileXML.SelectSingleNode(@"//ns:Project/ns:PropertyGroup/ns:publishUrl", nsmgr).InnerText;
@@ -179,7 +172,6 @@ namespace rap_versioning
 
 					//consider wiping out all files in rapBuilderOutputPathForCustomPage first
 					DirectoryCopy(customPageOutputLocation, rapBuilderOutputPathForCustomPage, true);
-
 
 					XmlElement newAssemblyNode = buildXML.CreateElement("CustomPage");
 					newAssemblyNode.SetAttribute("guid", customPageGuid);
