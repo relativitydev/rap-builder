@@ -69,6 +69,16 @@ Note: We are not open-sourcing the source code for kCura.RAPBuilder.exe
 	
 ##Notes
 * The custom page name in the application.xml must be same name as custom page project in Visual Studio
+* Add following code to Custom Page csproj file
+        <PropertyGroup>
+        <AutoDeployOnVSBuild>true</AutoDeployOnVSBuild>
+        <!--<AutoDeployOnVSBuild>false</AutoDeployOnVSBuild>-->
+        <AutoDeployPublishProfileName>FolderProfile</AutoDeployPublishProfileName>
+        </PropertyGroup>
+    - Add following code to Custom Page csproj file
+        <Target Name="AfterBuild">
+        <MSBuild Condition="'$(AutoDeployOnVSBuild)'=='true' AND '$(DeployOnBuild)'!='true'" Projects="$(MSBuildProjectFullPath)" Properties="DeployOnBuild=true;PublishProfile=$(AutoDeployPublishProfileName);BuildingInsideVisualStudio=False" />
+        </Target>
 		
 		
 				
