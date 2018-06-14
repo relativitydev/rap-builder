@@ -50,7 +50,7 @@ When set up properly this will create a rap file for a custom solution that cont
 	* under the **sample-application** folder, open the **application** folder
 	* Copy the contents of the **application.xml** file and paste it into the **application.xml** file found in the **SampleAppBuilder** project you created in the previous steps.  The paste should replace all text in the xml file.
 	
-* Add **FolderProfile** pubilishing profile for **SampleCustomPage** if it does not exist
+* Add **FolderProfile** publishing profile for **SampleCustomPage** if it does not exist
 
 * Build **SampleAppBuilder** project
 
