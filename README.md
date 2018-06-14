@@ -9,18 +9,17 @@ When set up properly this will create a rap file for a custom solution that cont
 
 ## Sample Usage (I have gone through this once.  Will repeat and update)
 (Using visual studio 2017. If this works for you in 2012 or 2015 let us know)
-1. Install **RapCreator** Visual Studio Template
-
-* Go to **Tools** --> **Extensions & Updates**
-  * Search for **Relativity**
-  * Select **RapCreator**
-  * Select **Download**
-    * You will have to restart Visual Studio to finish the install.
-	* Make sure the VSIX Installer window is around (it likes to hide) and follow the prompt to **Modify**
+* Install **RapCreator** Visual Studio Template
+	* Go to **Tools** --> **Extensions & Updates**
+  		* Search for **Relativity**
+  		* Select **RapCreator**
+  		* Select **Download**
+    		* You will have to restart Visual Studio to finish the install.
+			* Make sure the VSIX Installer window is around (it likes to hide) and follow the prompt to **Modify**
 
 [Add Screen shot of template install
  
- * Open Sample Application 
+* Open Sample Application 
 	* Clone the **sample-application** project on teh RelativityDev github account
 		* git clone git@github.com:relativitydev/sample-application.git
 	* Open **Source\BasicSampleApplication.sln** in Visual Studio
@@ -45,17 +44,17 @@ When set up properly this will create a rap file for a custom solution that cont
 				* SamplePreSaveEventHandler
 		* Right click **SampleAppBuilder**, Select **Manage Nuget Packages**
 			* Click **Restore**
+	* Add **FolderProfile** publishing profile for **SampleCustomPage** project if it does not exist
+		* Should be a folder publishing profle
 
 * Update application.xml
 	* under the **sample-application** folder, open the **application** folder
 	* Copy the contents of the **application.xml** file and paste it into the **application.xml** file found in the **SampleAppBuilder** project you created in the previous steps.  The paste should replace all text in the xml file.
 	
-* Add **FolderProfile** publishing profile for **SampleCustomPage** if it does not exist
-
 * Build **SampleAppBuilder** project
 
 * Deploy *SammpleAppBuilder**
-	* Find *sample-application\Source\SampleAppBuilder\bin\SampleAppBuilder.rap
+	* Find *sample-application\Source\SampleAppBuilder\bin\SampleAppBuilder.rap*
 	* Install to Relativity
 	* Install to a workspace
 	
