@@ -5,7 +5,7 @@ The rap-builder project uses the sample-application project to test with which c
 
 When set up properly this will create a rap file for a custom solution that contains applicaiton schema, event handlers, and agents.  Other types of extensibility points may work but have not been tested.  If you find one that does not work, please create an issue and feel free to jump in and fix. 
 
-Note: We are not open-sourcing the source code for kCura.RAPBuilder.exe
+**Note:** We are not open-sourcing the source code for kCura.RAPBuilder.exe
 
 ## Sample Usage (I have gone through this once.  Will repeat and update)
 (Using visual studio 2017. If this works for you in 2012 or 2015 let us know)
