@@ -70,16 +70,17 @@ When set up properly this will create a rap file for a custom solution that cont
 ##Notes
 * The custom page name in the application.xml must be same name as custom page project in Visual Studio
 * Add following code to Custom Page csproj file
-        ```<PropertyGroup>
+```
+        <PropertyGroup>
         <AutoDeployOnVSBuild>true</AutoDeployOnVSBuild>
         <!--<AutoDeployOnVSBuild>false</AutoDeployOnVSBuild>-->
         <AutoDeployPublishProfileName>FolderProfile</AutoDeployPublishProfileName>
-        </PropertyGroup>```
-    - Add following code to Custom Page csproj file
-        ```<Target Name="AfterBuild">
+        </PropertyGroup>
+ 
+	<Target Name="AfterBuild">
         <MSBuild Condition="'$(AutoDeployOnVSBuild)'=='true' AND '$(DeployOnBuild)'!='true'" Projects="$(MSBuildProjectFullPath)" Properties="DeployOnBuild=true;PublishProfile=$(AutoDeployPublishProfileName);BuildingInsideVisualStudio=False" />
-        </Target>```
-		
+        </Target>
+	
 		
 				
 		
