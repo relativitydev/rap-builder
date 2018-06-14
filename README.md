@@ -62,7 +62,7 @@ When set up properly this will create a rap file for a custom solution that cont
 * View the Sample Custom Page in a workspace
 
 * Make Change
-	* Update the string returned in the **HomeControlelr.cs** file of the SampleCustomPage project
+	* Update the string returned in the **HomeController.cs** file of the SampleCustomPage project
 	* Clear out Bin directory of the **SampleAppBuilder** project.
 	* Build **SampleAppBuilder**
 	* Update Application in Relativity with newly created rap file.
