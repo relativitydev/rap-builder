@@ -1,4 +1,4 @@
-#There are several things that need to change in this script to make it functional in your environment#
+# There are several things that need to change in this script to make it functional in your environment
 
 * Every instance of Add-Type -Path "S:\PS1DeployScript\kCura.Relativity.Client.dll" needs to point to a valid Client.dll for your target instance
   * This should be parameterized
