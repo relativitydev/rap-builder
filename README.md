@@ -21,7 +21,7 @@ When set up properly this will create a rap file for a custom solution that cont
  
 * Open Sample Application 
 	* Clone the **sample-application** project on teh RelativityDev github account
-		* git clone git@github.com:relativitydev/sample-application.git
+		* git clone https://github.com/relativitydev/sample-application.git
 	* Open **Source\BasicSampleApplication.sln** in Visual Studio
 		* There should be 3 projects (Can you guess what they do by their name?  If not, you should probably reach out to the Developer Experience team @ Relativity before you attempt this example.)
 			* SampleAgent
